@@ -1,6 +1,6 @@
 <p align="center">
-    <a href="https://kotlinlang.org" target="_blank">
-        <img src="docs/imgs/java-21.jpg" width="600" alt="Kotlin Logo">
+    <a href="https://docs.oracle.com/en/java/" target="_blank">
+        <img src="docs/imgs/java-21.jpg" width="600" alt="Java Logo">
     </a>
 </p>
 
@@ -20,7 +20,8 @@
 
 ## Dependencies
 
-- [Java `21`](https://sdkman.io/jdks/#amzn)
+- [Java `21.0.5-amzn`](https://sdkman.io/jdks/#amzn)
+- [Maven `3.9.9`](https://sdkman.io/sdks#maven)
 
 ## Complexity Analysis
 
@@ -46,5 +47,21 @@ Dado uma lista **&Alpha;** de **`n`** elementos com os valores **&Alpha;<sub>0</
 
 ## How to run?
 
-IntelliJ IDE
+```bash
+mvn clean install
+# ...
+# [INFO] ------------------------------------------------------------------------
+# [INFO] BUILD SUCCESS
+# [INFO] ------------------------------------------------------------------------
+# [INFO] Total time:  1.717 s
+# [INFO] Finished at: 2025-02-25T20:20:48-03:00
+# [INFO] ------------------------------------------------------------------------
 
+java -jar target/binary-search-in-java-1.0.0.jar 10
+# SUCCESSFUL - value 10 found in index 10 with 11 interactions!
+# Linear search of 10 from array size 1,000,000 took 21,770,539 nano
+
+java -jar target/binary-search-in-java-1.0.0.jar   
+# SUCCESSFUL - value 303,873 found in index 303,873 with 303,874 interactions!
+# Linear search of 303,873 from array size 1,000,000 took 22,309,957 nano
+```
